@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #8107ac,
+    #8430b9,
+    #8748c6,
+    #8a5cd1,
+    #8f6fdb,
+    #887fe6,
+    #828dee,
+    #7e9bf5,
+    #6da9fb,
+    #60b6fd,
+    #5bc1fd,
+    #5fccfb
+  );
+  color: #fff;
+  display: flex;
+  font-family: "Muli", sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+body.dark {
+  background-image: linear-gradient(
+    to bottom,
+    #dca4f4,
+    #d8aef8,
+    #d5b8fa,
+    #d4c1fb,
+    #d4cafb,
+    #ced1fd,
+    #cbd8fd,
+    #cbdefb,
+    #c7e3f9,
+    #c8e8f5,
+    #ccebf1,
+    #d4eeed
+  );
+}
+
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 0;
+}
+
+.container {
+  background-color: #23235b;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 1);
+  padding: 20px;
+  width: 350px;
+  max-width: 100%;
+}
+
+.result-container {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result-container .btn {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #602080;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .result-container {
+    font-size: 14px;
+  }
+}
+
+.buton {
+  margin-bottom: 50;
+}
+.checkbox {
+  opacity: 0;
+  float: right;
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #8f6fdb;
+}
+
+.fa-sun {
+  color: #d7d5f9;
+}
